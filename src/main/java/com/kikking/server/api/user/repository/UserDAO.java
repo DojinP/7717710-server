@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class UserDAO {
 
-    private static UserRepository userRepository;
-    private static PasswordEncoder passwordEncoder;
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
     public UserDAO(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
@@ -26,6 +26,6 @@ public class UserDAO {
                 .password(passwordEncoder.encode(signupRequestDTO.getPassword()))
                 .build();
 
-        return userRepository.save(toBeSavedUser);
+        return userRepository.saveUser(toBeSavedUser);
     }
 }
