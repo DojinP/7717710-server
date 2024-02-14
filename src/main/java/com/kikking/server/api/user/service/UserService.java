@@ -6,7 +6,6 @@ import com.kikking.server.api.user.exception.IdDuplicationException;
 import com.kikking.server.api.user.exception.PasswordConfirmMismatchException;
 import com.kikking.server.api.user.repository.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
