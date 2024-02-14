@@ -47,8 +47,6 @@ public class UserController {
                     .count(0).build();
         }
 
-        System.out.println(basicResponseMsg);
-
         return new ResponseEntity<>(basicResponseMsg, basicResponseMsg.getHttpStatus());
     }
 }
